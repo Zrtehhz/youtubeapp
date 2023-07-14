@@ -152,3 +152,48 @@ footer {
     margin: 10px;
     cursor: pointer;
 }
+
+@media (max-width: 460px) {
+    body {
+        font-size: 12px;
+    }
+  
+    #container {
+        width: 100%;
+    }
+  
+    header {
+        padding: 20px;
+    }
+  
+    h1 {
+        padding: 10px;
+    }
+  
+    .imagelogo {
+        padding: 10px;
+    }
+  
+    .search-field {
+        width: 65%;
+        padding-right: 35px;
+    }
+  
+    #search-btn {
+        right: 10px;
+        top: 5px;
+    }
+  
+    .list-left {
+        width: 30%;
+    }
+  
+    .list-right {
+        width: 68%;
+    }
+  
+    .paging-button {
+        margin: 5px;
+    }
+
+}
