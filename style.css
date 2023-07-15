@@ -198,6 +198,9 @@ p {
         width: 65%;
         padding-right: 35px;
     }
+    p {
+        font-size: 10px;
+    }
   
     #search-btn {
         right: 10px;
