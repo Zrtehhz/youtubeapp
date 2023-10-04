@@ -21,10 +21,8 @@
         <h1>MetaTube
         </h1>
         <h3>Recherchez toutes les vidéos MetaTube.</h3>
-        <p>
-            Notez que certaines vidéos ne peuvent pas être lues en raison de restrictions de pays, de ne pas être lues sur YouTube et d'autres raisons.
-            Cela ne peut pas être évité actuellement.
-            NE PAS cliquer sur le bouton jouer sur MetaTube car cela fera planter vos yeux.
+        <p style="display: flex; justify-content: center;">
+            Notez que certaines vidéos ne peuvent pas être lues en raison de restrictions de pays.
         </p>
     </header>
     <section>
@@ -41,7 +39,7 @@
             <div id="buttons"></div>
         </section>
         <footer>
-            <p>Copyright &copy; 2023</p>
+            <p style="font-weight: 700; font-size: 15px;">Copyright &copy; 2023</p>
         </footer>
     </div>
 
@@ -50,17 +48,7 @@
             $(".fancybox").fancybox();
         });
 
-        $(".fancybox-video").fancybox({
-  afterShow: function() {
-    
-    // Trouver l'iframe 
-    let iframe = this.$content.find('iframe');
-    
-    // Masquer les boutons YouTube
-    $(iframe).contents().find('.ytp-chrome-controls').hide();
 
-  }
-});
 
 
         // Searchbar Handler
@@ -238,21 +226,28 @@
             var channelTitle = item.snippet.channelTitle;
             var videoDate = item.snippet.publishedAt;
             var controls = item.snippet.controls;
+            var params = 'autoplay=1&modestbranding=1&rel=0&cc_load_policy=1&iv_load_policy=3&fs=0';
 
             // Build Output String**************************************
             var output = '<li>' +
-                '<div class="list-left">' +
-                '<img src="' + thumb + '">' +
-                '</div>' +
-                '<div class="list-right">' +
-                '<h3><a  class="fancybox fancybox.iframe autocontrols fancybox-video" href="https://www.youtube.com/embed/' + videoId +'">' + title + controls +
-                '</a></h3>' +
-                '<small>By <span class="cTitle">' + channelTitle + '</span> on ' + videoDate + '</small>' +
-                '<p>' + description + '</p>' +
-                '</div>' +
-                '</li>' +
-                '<div class="clearfix"></div>' +
-                '';
+  '<div class="list-left">' + 
+    '<img src="' + thumb + '">' +
+  '</div>' +
+  
+  '<div class="list-right">' +
+  
+    '<h3>' +
+        '<a class="fancybox fancybox.iframe fancybox-video" href="https://www.youtube.com/embed/' +
+      videoId + '?' + params + '">' +
+      title +
+    '</a>' +
+    '</h3>' +
+  
+    '<small>By <span class="cTitle">' + channelTitle + '</span> on ' + videoDate + '</small>' +   
+    '<p>' +  '</p>' +
+  
+  '</div>' +
+'</li>'; 
 
             return output;
 
