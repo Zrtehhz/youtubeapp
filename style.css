@@ -83,6 +83,19 @@ p {
 #search-form {
     display: block;
     margin-bottom: 15px;
+
+}
+
+.fancy-inner {
+
+    width: 154px;
+    height: 104px;
+}
+
+.ytp-youtube-button,
+.ytp-button,  
+.yt-uix-sessionlink {
+  display: none !important;
 }
 
 .fieldcontainer {
@@ -102,15 +115,12 @@ p {
     padding-right: 43px;
     background: #ffffff;
     color: #212121;
-    border: 1px solid #555;
     font-size: 1.6em;
-    border-bottom-color: #555;
     border-radius: 1px;
     -moz-border-radius: 1px;
     -webkit-border-radius: 1px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 6px #555;
-    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 6px #555;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 6px #555;
+   border: 0;
+   outline: none;
 }
 
 #search-btn {
@@ -173,6 +183,8 @@ p {
     cursor: pointer;
 }
 
+
+
 @media (max-width: 460px) {
     body {
         font-size: 12px;
@@ -219,4 +231,4 @@ p {
         margin: 5px;
     }
 
-}
+    }
